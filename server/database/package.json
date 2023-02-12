@@ -1,0 +1,27 @@
+{
+  "name": "database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "create_migration": "npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string",
+    "create_one_migration": "npx sequelize-cli migration:generate --name",
+    "all_migrations": "npx sequelize-cli db:migrate",
+    "one_migration": "npx sequelize db:migrate --name",
+    "one_megration_down": "npx sequelize db:migrate:undo --name 20230211152029-add_user_role.js",
+    "create_seed": "npx sequelize-cli seed:generate --name",
+    "one_seed": "npx sequelize-cli db:seed --seed",
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^3.1.2",
+    "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.0"
+  }
+}
